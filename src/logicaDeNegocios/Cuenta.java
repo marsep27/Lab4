@@ -1,22 +1,26 @@
 /*
- *Laboratorio3
+ *Laboratorio4
  *Grupo 40
  *San José
  *SAMANTHA PATRICIA ARBUROLA LEON
  *ADRIAN ESTEBAN ARBUROLA LEON
  *MARCO GERARDO SOTO MORERA
+ *FEDERICO ANDRES MONTEALEGRE CAMPABADAL
  */
 package logicaDeNegocios;
 import java.util.*;
 import java.text.*;
-public class Cuenta {
+
+public abstract class Cuenta {
 	private static int sCantCuentas=0;
-	private int numCuenta=0;
-	private Cliente duenio=null;
-	private double saldo=0;
-	private Date fechaCreacion;
-	private ArrayList<Operacion> operaciones;
-	private int numOperaciones=0;
+	protected int numCuenta=0;
+	protected Cliente duenio=null;
+	protected double saldo=0;
+	protected Date fechaCreacion;
+	protected ArrayList<Operacion> operaciones;
+	protected int numOperaciones=0;
+	protected String tipoCuenta;
+
 
 public int getNumCuenta(){
 	return numCuenta; //Salida entero
