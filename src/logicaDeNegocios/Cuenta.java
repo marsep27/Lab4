@@ -12,7 +12,6 @@ import java.util.*;
 import java.text.*;
 
 public abstract class Cuenta {
-	private static int sCantCuentas=0;
 	protected int numCuenta=0;
 	protected Cliente duenio=null;
 	protected double saldo=0;
@@ -92,7 +91,8 @@ public String toString() {
 	//Salida: String con los valores en la clase
 	String msg;
 	msg="Cuenta Número: " + getNumCuenta() + "\n";
-	msg+="Fecha creadan: " + getFechaCreacion() + "\n";
+	msg+="Tipo: "+ getTipoCuenta() + "\n";
+	msg+="Fecha creada: " + getFechaCreacion() + "\n";
 	msg+=duenio.toString();
 	msg+="Saldo: " + getSaldo() + "\n";
 	msg+="Registro de Operaciones" + "\n";
@@ -105,13 +105,45 @@ public String toString() {
 	return msg;
 }
 //Constructor
-public Cuenta(Cliente pDuenio,double pMonto){
+public Cuenta(String pTipo, int pNumero, Cliente pDuenio, double pMonto){
 	//Entradas: String con el nombre y numero doble con un monto
-	sCantCuentas ++;
-	setNumCuenta(sCantCuentas);
+	setTipoCuenta(pTipo);
+	setNumCuenta(pNumero);
+	operaciones=new ArrayList<Operacion>();
 	depositar(pMonto);
 	setDuenio(pDuenio);
 	setFechaCreacion(); 
-	operaciones=new ArrayList<Operacion>();
+	numOperaciones=0;
+}
+
+public ArrayList<Operacion> getOperaciones() {
+	return operaciones;
+}
+
+public void setOperaciones(ArrayList<Operacion> operaciones) {
+	this.operaciones = operaciones;
+}
+
+public int getNumOperaciones() {
+	return numOperaciones;
+}
+
+public void setNumOperaciones(int numOperaciones) {
+	this.numOperaciones = numOperaciones;
+}
+
+public String getTipoCuenta() {
+	return tipoCuenta;
+}
+
+public void setTipoCuenta(String tipoCuenta) {
+	this.tipoCuenta = tipoCuenta;
+}
+
+public void setFechaCreacion(Date fechaCreacion) {
+	this.fechaCreacion = fechaCreacion;
+}
+public abstract String cobrarComisiones();{
+	
 }
 }
