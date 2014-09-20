@@ -5,9 +5,6 @@ package logicaDeNegocios;
 
 import java.util.Calendar;
 import java.util.*;
-import Cliente;
-import Duenio;
-
 
 
 /**
