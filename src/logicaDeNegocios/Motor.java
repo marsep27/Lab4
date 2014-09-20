@@ -13,7 +13,6 @@ package logicaDeNegocios;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 
-
 public class Motor {
 	//Atributos	de la clase motor
 		String marca;
@@ -24,11 +23,11 @@ public class Motor {
 
 	public Motor() {
 		System.out.println("Digite la Marca del motor: ");
-	 	marca = System.in.readLine();
+	 	marca = in.readLine();
 	 	System.out.println("Digite el número de Serie del motor: ");
-	 	numSerie = System.in.readLine();
+	 	numSerie = in.readLine();
 	 	System.out.println("Digite el cilindraje del motor: ");
-	 	cilindraje = System.in.readLine();
+	 	cilindraje = in.readLine();
 	}
 	//Metodos get y set
 	public String getMarca() {
