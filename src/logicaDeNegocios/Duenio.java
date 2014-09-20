@@ -10,23 +10,39 @@
 package logicaDeNegocios;
 
 public class Duenio {
-	//Atributos de la clase duenio
-	Motor regAutomovil;
-	regAutomovil.setMarca(String pMarca);
-	regAutomovil.setNumSerie(String pNumSerie);
-	regAutomovil.setCilindraje(String pCilindraje);
+	private String nombre;
+	private String telefono;
+	
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-	public Duenio() {
-		regAutomovil.getMarca();
-		regAutomovil.getNumSerie();
-		regAutomovil.getCilindraje();
+	public String getTelefono() {
+		return telefono;
 	}
-	//Metodos get y set
-	public Motor getRegAutomovil() {
-		return regAutomovil;//Salida: de tipo motor
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
 	}
-	public void setRegAutomovil(Motor regAutomovil) {
-		this.regAutomovil = regAutomovil;//Entrada: String con el motor
+	
+	
+	public Duenio(String pNombre,String pTelefono) {
+		// TODO Auto-generated constructor stub
+		setNombre(pNombre);
+		setTelefono(pTelefono);
 	}
+	@Override
+	public String toString() {
+		String msg="";
+		msg+="Nombre: "+getNombre()+" "+"\n";
+		msg+="Teléfono: "+getTelefono()+"\n";
+		return msg;
+	}
+	
+	
+	
+	
 
 }
