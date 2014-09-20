@@ -24,6 +24,7 @@ public class Automovil {
 	private String Dueno;
 	private String Telefono_Dueno;
 	private boolean isChocado=false;
+	private String tipoAuto;
 //Metodos get y set	
 	public String getMarca() {
 		return Marca; //Salida: String 
@@ -163,5 +164,11 @@ public String toString() {
 			+ "\n"+ "FechaCompra: " + getFechaCompra() +"\n"+ "Marca: " + getMarca() +"\n" +"Color: "
 			+ getColor()+"\n" +"Costo: $" + getCosto()+"\n" + "Placa N°: " + getPlaca() +"\n"+ "Estado: "
 			+ chocado + "\n";
+}
+public String getTipoAuto() {
+	return tipoAuto;
+}
+public void setTipoAuto(String tipoAuto) {
+	this.tipoAuto = tipoAuto;
 }
 }
