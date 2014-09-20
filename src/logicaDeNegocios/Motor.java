@@ -10,24 +10,28 @@
 package logicaDeNegocios;
 
 //Importar
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 
 public class Motor {
 	//Atributos	de la clase motor
 		String marca;
-		String numSerie;
-		String cilindraje;
+		int numSerie;
+		int cilindraje;
 		private PrintStream out;
 		private Object in;
 
-	public Motor() {
+	public Motor() throws IOException {
+		InputStreamReader isr = new InputStreamReader(System.in);
+		BufferedReader br = new BufferedReader (isr);
 		System.out.println("Digite la Marca del motor: ");
-	 	marca = in.readLine();
+	 	marca = br.readLine();
 	 	System.out.println("Digite el número de Serie del motor: ");
-	 	numSerie = in.readLine();
+	 	numSerie = System.in.read();
 	 	System.out.println("Digite el cilindraje del motor: ");
-	 	cilindraje = in.readLine();
+	 	cilindraje = System.in.read();
 	}
 	//Metodos get y set
 	public String getMarca() {
@@ -38,20 +42,20 @@ public class Motor {
 		this.marca = marca;//Entrada: String con la marca
 	}
 
-	public String getNumSerie() {
-		return numSerie;//Salida: String 
+	public int getNumSerie() {
+		return numSerie;//Salida: Entero
 	}
 
-	public void setNumSerie(String numSerie) {
-		this.numSerie = numSerie;//Entrada: String con el numero de serie
+	public void setNumSerie(int numSerie) {
+		this.numSerie = numSerie;//Entrada: entero con el numero de serie
 	}
 
-	public String getCilindraje() {
-		return cilindraje;//Salida: String 
+	public int getCilindraje() {
+		return cilindraje;//Salida: Entero
 	}
 
-	public void setCilindraje(String cilindraje) {
-		this.cilindraje = cilindraje;//Entrada: String con el cilindraje
+	public void setCilindraje(int cilindraje) {
+		this.cilindraje = cilindraje;//Entrada: entero con el cilindraje
 	}
 
 	public PrintStream getOut() {
