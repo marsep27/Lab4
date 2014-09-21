@@ -4,8 +4,6 @@ package logicaDeNegocios;
 import java.io.IOException;
 import logicaDeNegocios.Motor;
 
-import logicaDeNegocios.Motor;
-
 
 public class V8 extends Motor {
 	//atributos 

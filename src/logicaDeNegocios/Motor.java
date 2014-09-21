@@ -1,10 +1,6 @@
 package logicaDeNegocios;
 
 //Importar
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
 
 public abstract class Motor {
 	
@@ -13,11 +9,10 @@ public abstract class Motor {
 		int numSerie;
 		public static int cilindraje;
 		public static int estado = 0;
-		private PrintStream out;
-		private Object in;
+
 		
 
-	//Mï¿½todos
+	//Métodos
 	// Constructor(1)
 	public Motor(String pMarca, int pNumSerie, int pCilindraje, int pEstado )  { // throws IOException
 		/**
@@ -75,13 +70,10 @@ public abstract class Motor {
 	public int getNumSerie() {return numSerie;}
 	//Entrada: entero con el numero de serie
 	public void setNumSerie(int numSerie) {this.numSerie = numSerie;}
-	
-	//Salida: Entero
+
 	public static int getCilindraje() {return cilindraje;}
-	//Entrada: entero con el cilindraje
-	public void setCilindraje(int cilindraje) {this.cilindraje = cilindraje;}
+	public static void setCilindraje(int cilindraje) {Motor.cilindraje = cilindraje;}
 
 	public static int getEstado() {return estado;}
-	public void setEstado(int estado) {this.estado = estado;}
-
+	public static void setEstado(int estado) {Motor.estado = estado;}
 }

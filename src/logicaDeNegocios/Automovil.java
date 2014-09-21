@@ -63,4 +63,8 @@ public abstract class Automovil {
 		
 		return "Placa de auto: " + Placa + ". " + "Tracción obtenida: " + traccion;
 	}
+	public static int getCPlaca() {return CPlaca;}
+	public static void setCPlaca(int cPlaca) {CPlaca = cPlaca;}
+	public String getTipoAuto() {return tipoAuto;}
+	public void setTipoAuto(String tipoAuto) {this.tipoAuto = tipoAuto;}
 }
