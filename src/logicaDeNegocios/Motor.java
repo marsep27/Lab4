@@ -39,13 +39,24 @@ public abstract class Motor {
 	}
 	
 	// Constructor (2)
-	public Motor(String pMarca, int pNumSerie, int pCilindraje)  { // throws IOException
+	public Motor(String pMarca, int pNumSerie, int pCilindraje)  
+	{ // throws IOException
 		// Estado ya es 100
 		marca 	   = pMarca;
 		numSerie   = pNumSerie;
 		cilindraje = pCilindraje;
 		estado     = 100;
 	}
+
+	// Obtener Cilindraje con Condición Turbo
+	public int obtenerCilindraje(){
+		  if ((estado == 50) && ()){ // Si el estado del motor V8 es de 50% encontes se activa el turbo y al motor se le añaden 500cc.
+		   cilindraje = cilindraje + 500;
+		  }
+		  
+		  return estado * cilindraje; 
+		 }
+	
 	
 	
 	public Motor() {
@@ -53,50 +64,22 @@ public abstract class Motor {
 	}
 
 	//Metodos get y set
-	public String getMarca() {
-		return marca;//Salida: String 
-	}
+	//Salida: String
+	public String getMarca() {return marca; }
+	//Entrada: String con la marca
+	public void setMarca(String marca) {this.marca = marca;}
+	
+	//Salida: Entero
+	public int getNumSerie() {return numSerie;}
+	//Entrada: entero con el numero de serie
+	public void setNumSerie(int numSerie) {this.numSerie = numSerie;}
+	
+	//Salida: Entero
+	public static int getCilindraje() {return cilindraje;}
+	//Entrada: entero con el cilindraje
+	public void setCilindraje(int cilindraje) {this.cilindraje = cilindraje;}
 
-	public void setMarca(String marca) {
-		this.marca = marca;//Entrada: String con la marca
-	}
-
-	public int getNumSerie() {
-		return numSerie;//Salida: Entero
-	}
-
-	public void setNumSerie(int numSerie) {
-		this.numSerie = numSerie;//Entrada: entero con el numero de serie
-	}
-
-	public static int getCilindraje() {
-		return cilindraje;//Salida: Entero
-	}
-
-	public void setCilindraje(int cilindraje) {
-		this.cilindraje = cilindraje;//Entrada: entero con el cilindraje
-	}
-
-	public PrintStream getOut() {
-		return out;
-	}
-
-	public void setOut(PrintStream out) {
-		this.out = out;
-	}
-
-	public Object getIn() {
-		return in;
-	}
-
-	public void setIn(Object in) {
-		this.in = in;
-	}
-	public static int getEstado() {
-		return estado;
-	}
-	public void setEstado(int estado) {
-		this.estado = estado;
-	}
+	public static int getEstado() {return estado;}
+	public void setEstado(int estado) {this.estado = estado;}
 
 }
