@@ -1,12 +1,3 @@
-/*
- *Laboratorio3
- *Grupo 40
- *San Josï¿½
- *SAMANTHA PATRICIA ARBUROLA LEON
- *ADRIAN ESTEBAN ARBUROLA LEON
- *MARCO GERARDO SOTO MORERA
- */
-
 package logicaDeNegocios;
 
 //Importar
@@ -26,7 +17,7 @@ public abstract class Motor {
 		private Object in;
 		
 
-	//Métodos
+	//Mï¿½todos
 	// Constructor(1)
 	public Motor(String pMarca, int pNumSerie, int pCilindraje, int pEstado )  { // throws IOException
 		/**
@@ -34,7 +25,7 @@ public abstract class Motor {
 		BufferedReader br = new BufferedReader (isr);
 		System.out.println("Digite la Marca del motor: ");
 	 	marca      = br.readLine();
-	 	System.out.println("Digite el nímero de Serie del motor: ");
+	 	System.out.println("Digite el nï¿½mero de Serie del motor: ");
 	 	numSerie   = System.in.read();
 	 	System.out.println("Digite el cilindraje del motor: ");
 	 	cilindraje = System.in.read();
@@ -57,6 +48,10 @@ public abstract class Motor {
 	}
 	
 	
+	public Motor() {
+		// TODO Auto-generated constructor stub
+	}
+
 	//Metodos get y set
 	public String getMarca() {
 		return marca;//Salida: String 

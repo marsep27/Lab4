@@ -3,7 +3,7 @@ package logicaDeNegocios;
 import logicaDeNegocios.Automovil;
 
 class Sedan extends Automovil {
-	
+
 	//constructor 1 
 	public Sedan(){
 		int estado = 100;
@@ -13,4 +13,5 @@ class Sedan extends Automovil {
 	public Sedan(int pEstado){
 		int estado = pEstado;
 	}
+	
 }

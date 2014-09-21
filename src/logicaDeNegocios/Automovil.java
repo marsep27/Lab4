@@ -1,12 +1,3 @@
-/*
- *Laboratorio3
- *Grupo 40
- *San Josï¿½
- *SAMANTHA PATRICIA ARBUROLA LEON
- *ADRIAN ESTEBAN ARBUROLA LEON
- *MARCO GERARDO SOTO MORERA
- */
-
 package logicaDeNegocios;
 
 import logicaDeNegocios.Motor;
@@ -55,7 +46,7 @@ public abstract class Automovil {
 		return mascara.format(FechaCompra);}
 
 	public String getDueno() {return Dueno;}	//Salida:String con el nombre del dueno
-	public void setDueno(String dueno) {Dueno = dueno;}	//Entrada:String con el nombre del dueño
+	public void setDueno(String dueno) {Dueno = dueno;}	//Entrada:String con el nombre del dueï¿½o
 	
 	public String getTelefono_Dueno() {return Telefono_Dueno;} //Salida:String con el telefono
 	public void setTelefono_Dueno(String telefono_Dueno) {Telefono_Dueno = telefono_Dueno;}	//Entrada:String con el telefono
@@ -64,9 +55,11 @@ public abstract class Automovil {
 	public void setChocado(boolean isChocado) {this.isChocado = isChocado;} 	//Entrada: true o false(0 o 1)
 	
 	
-	// Métodos
-	public void calcularTraccion(int pInclinacion)
+	// Mï¿½todos
+	public String calcularTraccion(int pInclinacion)
 	{	
 		int traccion = (Motor.getEstado() * Motor.getCilindraje() ) + (pInclinacion * 980);
+		
+		return "Placa de auto: " + Placa + ". " + "TracciÃ³n obtenida: " + traccion;
 	}
 }
