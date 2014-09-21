@@ -7,7 +7,8 @@ public class V6 extends Motor {
 	int cilindraje = 2500;
 
 	//constructor
-	public V6() throws IOException {
+	public V6() throws IOException
+	{
 		super();
 		// TODO Auto-generated constructor stub
 	}

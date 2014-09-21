@@ -20,21 +20,43 @@ public abstract class Motor {
 	//Atributos	de la clase motor
 		String marca;
 		int numSerie;
-		int cilindraje;
+		public static int cilindraje;
+		public static int estado = 0;
 		private PrintStream out;
 		private Object in;
+		
 
-	//MÃ©todos
-	public Motor() throws IOException {
+	//Métodos
+	// Constructor(1)
+	public Motor(String pMarca, int pNumSerie, int pCilindraje, int pEstado )  { // throws IOException
+		/**
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader (isr);
 		System.out.println("Digite la Marca del motor: ");
-	 	marca = br.readLine();
-	 	System.out.println("Digite el nï¿½mero de Serie del motor: ");
-	 	numSerie = System.in.read();
+	 	marca      = br.readLine();
+	 	System.out.println("Digite el nímero de Serie del motor: ");
+	 	numSerie   = System.in.read();
 	 	System.out.println("Digite el cilindraje del motor: ");
 	 	cilindraje = System.in.read();
+	 	System.out.println("Digite el estado del motor");
+	 	estado     = System.in.read();
+		*/
+		marca 	   = pMarca;
+		numSerie   = pNumSerie;
+		cilindraje = pCilindraje;
+		estado     = pEstado;
 	}
+	
+	// Constructor (2)
+	public Motor(String pMarca, int pNumSerie, int pCilindraje)  { // throws IOException
+		// Estado ya es 100
+		marca 	   = pMarca;
+		numSerie   = pNumSerie;
+		cilindraje = pCilindraje;
+		estado     = 100;
+	}
+	
+	
 	//Metodos get y set
 	public String getMarca() {
 		return marca;//Salida: String 
@@ -52,7 +74,7 @@ public abstract class Motor {
 		this.numSerie = numSerie;//Entrada: entero con el numero de serie
 	}
 
-	public int getCilindraje() {
+	public static int getCilindraje() {
 		return cilindraje;//Salida: Entero
 	}
 
@@ -74,6 +96,12 @@ public abstract class Motor {
 
 	public void setIn(Object in) {
 		this.in = in;
+	}
+	public static int getEstado() {
+		return estado;
+	}
+	public void setEstado(int estado) {
+		this.estado = estado;
 	}
 
 }
