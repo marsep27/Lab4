@@ -1,7 +1,7 @@
 /*
  *Laboratorio3
  *Grupo 40
- *San José
+ *San Josï¿½
  *SAMANTHA PATRICIA ARBUROLA LEON
  *ADRIAN ESTEBAN ARBUROLA LEON
  *MARCO GERARDO SOTO MORERA
@@ -15,7 +15,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 
-public class Motor {
+public abstract class Motor {
+	
 	//Atributos	de la clase motor
 		String marca;
 		int numSerie;
@@ -23,12 +24,13 @@ public class Motor {
 		private PrintStream out;
 		private Object in;
 
+	//MÃ©todos
 	public Motor() throws IOException {
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader (isr);
 		System.out.println("Digite la Marca del motor: ");
 	 	marca = br.readLine();
-	 	System.out.println("Digite el número de Serie del motor: ");
+	 	System.out.println("Digite el nï¿½mero de Serie del motor: ");
 	 	numSerie = System.in.read();
 	 	System.out.println("Digite el cilindraje del motor: ");
 	 	cilindraje = System.in.read();
