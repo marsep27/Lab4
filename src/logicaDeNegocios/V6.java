@@ -12,6 +12,7 @@ public class V6 extends Motor {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
+	
+	
 	//metodos
 }

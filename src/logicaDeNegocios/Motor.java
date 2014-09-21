@@ -50,7 +50,9 @@ public abstract class Motor {
 
 	// Obtener Cilindraje con Condición Turbo
 	public int obtenerCilindraje(){
-		  if ((estado == 50) && ()){ // Si el estado del motor V8 es de 50% encontes se activa el turbo y al motor se le añaden 500cc.
+		  if ((estado == 50) && (cilindraje>=3200))
+		  { /** Si el estado del motor V8 es de 50% 
+			encontes se activa el turbo y al motor se le añaden 500cc.*/
 		   cilindraje = cilindraje + 500;
 		  }
 		  
