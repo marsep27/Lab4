@@ -9,8 +9,8 @@
  */
 package logicaDeNegocios;
 import java.util.*;
-import java.text.*;
-import java.util.Calendar;
+//import java.text.*;
+
 
 public class Operacion {
 	//Atributos de la clase operacion
@@ -50,22 +50,17 @@ public class Operacion {
 		this.monto = monto;//Entrada: double con el monto
 	}
 
-	public String getFechaOperacion() {
-		//Se crea una mascara para que muestre la fecha en el formato dia/mes/año
-		SimpleDateFormat mascara=new SimpleDateFormat("dd/MM/yy");
-		return mascara.format(FechaOperacion);//Salida: String 
-	}
-
-	public void setFechaOperacion() {
-		//Se utiliza la clase calendario para obtener la fecha de la operacion
-		Calendar calendario;
-		calendario= Calendar.getInstance();
-		FechaOperacion=(Date)calendario.getTime();//Entrada: String con la operacion
-	}
+	
 	public String toString(){
 		String msg;
 		msg="\t" + getNumero() + "\t" + getFechaOperacion() + 
 				"\t" + getTipo() + "\t" + getMonto() + "\n";
 		return msg;
+	}
+	public Date getFechaOperacion() {
+		return FechaOperacion;
+	}
+	public void setFechaOperacion(Date fechaOperacion) {
+		FechaOperacion = fechaOperacion;
 	}
 }

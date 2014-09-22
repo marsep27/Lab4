@@ -45,16 +45,6 @@ public double getSaldo() {
 public void setSaldo(double saldo) {
 	this.saldo = saldo;//Entrada: Valor entero o double. //Restriccion debe de ser un numero
 }
-public void setFechaCreacion(){
-	Calendar calendario;
-	calendario=Calendar.getInstance();
-	fechaCreacion=calendario.getTime();
-}
-public String getFechaCreacion(){
-	SimpleDateFormat mascara=new SimpleDateFormat("dd/MM/yy");
-	return mascara.format(fechaCreacion);
-	
-}
 
 public String depositar(double pMonto){
 	//Entrada: numero double;
@@ -146,5 +136,9 @@ public void setFechaCreacion(Date fechaCreacion) {
 }
 public abstract String cobrarComisiones();{
 	
+}
+
+public Date getFechaCreacion() {
+	return fechaCreacion;
 }
 }

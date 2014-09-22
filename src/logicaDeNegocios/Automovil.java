@@ -11,8 +11,7 @@ package logicaDeNegocios;
 
 import logicaDeNegocios.Motor;
 import java.util.*;
-import java.text.*;
-import java.util.Calendar;
+//import java.text.*;
 
 public abstract class Automovil {
 	
@@ -44,17 +43,6 @@ public abstract class Automovil {
 	public String getColor() {return Color;}	//Salida:String con el color
 	public void setColor(String color) {Color = color;}//Entrada:String con el color
 	
-	public void setFechaCompra(){
-		//Se utiliza la clase calendario para obtener la fecha de la maquina
-		Calendar calendario;
-		calendario=Calendar.getInstance();
-		FechaCompra=calendario.getTime();}
-	
-	public String getFechaCompra() {
-		//Se crea una mascara para que muestre la fecha en el formato dia/mes/a�o
-		SimpleDateFormat mascara=new SimpleDateFormat("dd/MM/yy");
-		return mascara.format(FechaCompra);}
-
 	public String getDueno() {return Dueno;}	//Salida:String con el nombre del dueno
 	public void setDueno(String dueno) {Dueno = dueno;}	//Entrada:String con el nombre del due�o
 	
@@ -76,4 +64,10 @@ public abstract class Automovil {
 	public static void setCPlaca(int cPlaca) {CPlaca = cPlaca;}
 	public String getTipoAuto() {return tipoAuto;}
 	public void setTipoAuto(String tipoAuto) {this.tipoAuto = tipoAuto;}
+	public Date getFechaCompra() {
+		return FechaCompra;
+	}
+	public void setFechaCompra(Date fechaCompra) {
+		FechaCompra = fechaCompra;
+	}
 }
