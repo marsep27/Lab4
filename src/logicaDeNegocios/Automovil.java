@@ -1,3 +1,12 @@
+/*
+ *Laboratorio4
+ *Grupo 40
+ *San José
+ *SAMANTHA PATRICIA ARBUROLA LEON
+ *ADRIAN ESTEBAN ARBUROLA LEON
+ *MARCO GERARDO SOTO MORERA
+ *FEDERICO ANDRES MONTEALEGRE CAMPABADAL
+ */
 package logicaDeNegocios;
 
 import logicaDeNegocios.Motor;
