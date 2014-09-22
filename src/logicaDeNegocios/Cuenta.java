@@ -8,9 +8,8 @@
  *FEDERICO ANDRES MONTEALEGRE CAMPABADAL
  */
 package logicaDeNegocios;
+import java.text.SimpleDateFormat;
 import java.util.*;
-import java.text.*;
-import java.util.Calendar;
 
 public abstract class Cuenta {
 	protected int numCuenta=0;
@@ -87,7 +86,7 @@ public String toString() {
 	msg+=duenio.toString();
 	msg+="Saldo: " + getSaldo() + "\n";
 	msg+="Registro de Operaciones" + "\n";
-	msg+="Número" + "Fecha" + "Operación" + "Monto" + "\n";
+	msg+="--Número-" + "-Fecha-" + "-Operación-" + "-Monto-" + "\n";
 	for (int i = 0; i < operaciones.size();i++)
 	{
 		Operacion unaOp;
@@ -104,7 +103,7 @@ public Cuenta(String pTipo, int pNumero, Cliente pDuenio, double pMonto){
 	operaciones=new ArrayList<Operacion>();
 	depositar(pMonto);
 	setDuenio(pDuenio);
-	setFechaCreacion(fechaCreacion); 
+	setFechaCreacion(); 
 	numOperaciones=0;
 }
 
@@ -132,14 +131,17 @@ public void setTipoCuenta(String tipoCuenta) {
 	this.tipoCuenta = tipoCuenta;
 }
 
-public void setFechaCreacion(Date fechaCreacion) {
-	this.fechaCreacion = fechaCreacion;
+public void setFechaCreacion() {
+	Calendar calendario;
+	calendario = Calendar.getInstance();
+	fechaCreacion = calendario.getTime();
 }
 public abstract String cobrarComisiones();{
 	
 }
 
-public Date getFechaCreacion() {
-	return fechaCreacion;
+public String getFechaCreacion() {
+	SimpleDateFormat mascara = new SimpleDateFormat("dd/MM/yy");
+	return mascara.format(fechaCreacion);
 }
 }
