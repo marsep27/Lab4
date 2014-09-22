@@ -88,9 +88,10 @@ public String toString() {
 	msg+="Saldo: " + getSaldo() + "\n";
 	msg+="Registro de Operaciones" + "\n";
 	msg+="Número" + "Fecha" + "Operación" + "Monto" + "\n";
-	for (int i = 0; 1<operaciones.size();i++)
+	for (int i = 0; i < operaciones.size();i++)
 	{
-		Operacion unaOp=(Operacion)operaciones.get(i);
+		Operacion unaOp;
+		unaOp = (Operacion)operaciones.get(i);
 		msg+= unaOp.toString();
 	}
 	return msg;
@@ -103,7 +104,7 @@ public Cuenta(String pTipo, int pNumero, Cliente pDuenio, double pMonto){
 	operaciones=new ArrayList<Operacion>();
 	depositar(pMonto);
 	setDuenio(pDuenio);
-	setFechaCreacion(); 
+	setFechaCreacion(fechaCreacion); 
 	numOperaciones=0;
 }
 
